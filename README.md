@@ -91,7 +91,7 @@ The Threshold Sparsifier learns a single, shared scalar cutoff $\tau \in [0, 1]$
 Comparing static cutoff values $\tau \in [0.0, 0.1, ..., 0.9]$ against learnable models:
 
 <p align="center">
-  <img src="images/threshold_sparsifier.png" width="95%" alt="Threshold Sparsifier Results" />
+  <img src="plots/threshold_sparsifier.png" width="95%" alt="Threshold Sparsifier Results" />
 </p>
 
 - **Peak Performance & Convergence**: The learnable ReLU variant achieved the highest PR-AUC across all evaluated configurations (0.7438 ± 0.1348) while ranking near the top in Balanced Accuracy and $F_1$-score.
@@ -109,7 +109,7 @@ The Top-$k$ Per-Node strategy allows each EEG electrode to adaptively learn its 
 Comparing static neighbor sweeps ($k \in \{1, \dots, 21\}$) against learnable Per-Node models (ReLU vs. Sigmoid gating):
 
 <p align="center">
-  <img src="images/top_k_sparsifier_per_node.png" width="95%" alt="Top-k Per Node Results" />
+  <img src="plots/top_k_sparsifier_per_node.png" width="95%" alt="Top-k Per Node Results" />
 </p>
 
 - The learnable Sigmoid variant matches the top manually tuned static baselines ($k = 13$ and $k = 16$), this time outperforming the harder ReLU gating.
@@ -119,7 +119,7 @@ Comparing static neighbor sweeps ($k \in \{1, \dots, 21\}$) against learnable Pe
 Averaged across all 5 test folds, the learned degree distribution per bipolar channel was mapped onto scalp geometry:
 
 <p align="center">
-  <img src="images/topomap_final.png" width="85%" alt="Learned Top-k Topomap" />
+  <img src="plots/topomap.png" width="85%" alt="Learned Top-k Topomap" />
 </p>
 
 - **Inter-hemispheric Asymmetry**: Electrodes over the left hemisphere (odd-numbered designations, e.g., `T7-FT9`, `T7-P7`, `F3-C3`, `P7-T7`) consistently learned larger receptive neighborhoods ($k \approx 11 - 12$ neighbors) compared to channels in the right hemisphere ($k \approx 7 - 9$).
