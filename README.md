@@ -9,7 +9,7 @@
 
 ## 📌 About The Project
 
-Graph Neural Networks (GNNs) applied to functional brain connectivity graphs have demonstrated strong potential for automated epileptic seizure detection. However, raw connectivity graphs (e.g., Phase Locking Value — PLV) are typically fully connected and noisy. Standard graph construction relies on static, manually tuned thresholding heuristics or costly hyperparameter sweeps, which can be sensitive to the choice of dataset.
+Graph Neural Networks (GNNs) applied to functional brain connectivity graphs have demonstrated strong potential for automated epileptic seizure detection. However, functional connectivity graphs derived from EEG signals (e.g., using Phase Locking Value — PLV) are typically fully connected and noisy. Standard graph construction relies on static, manually tuned thresholding heuristics or costly hyperparameter sweeps, which can be sensitive to the choice of dataset.
 
 This repository proposes and implements **learnable, differentiable graph sparsification layers**, operating at the edge-weight level, trained end-to-end via gradient descent alongside a GCN-based classifier:
 - **Threshold Sparsifier**: Learns an adaptive global cutoff $\tau \in [0, 1]$.
